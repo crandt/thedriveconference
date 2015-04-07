@@ -74,7 +74,17 @@ define( 'WP_DEBUG_DISPLAY', false );
 // Other Definitions
 // =================
 
+// Determine HTTP or HTTPS, then set WP_SITEURL and WP_HOME
+if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443)
+{
+$protocol_to_use = 'https://';
+} else {
+    $protocol_to_use = 'http://';
+}
+
+define( 'WP_SITEURL', $protocol_to_use . $_SERVER['HTTP_HOST'] . '/wp/');
 define( 'WP_HOME', $protocol_to_use . $_SERVER['HTTP_HOST']);
+
 
 define( 'UPLOADS', ''.'files' );
 
