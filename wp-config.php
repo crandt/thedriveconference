@@ -38,15 +38,16 @@ define( 'DB_COLLATE', '' );
 // ==============================================================
 // Salts, for security
 // Grab these from: https://api.wordpress.org/secret-key/1.1/salt
+// ** MOVED TO LOCAL-CONFIG FILE **
 // ==============================================================
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+// define( 'AUTH_KEY',         'put your unique phrase here' );
+// define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+// define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+// define( 'NONCE_KEY',        'put your unique phrase here' );
+// define( 'AUTH_SALT',        'put your unique phrase here' );
+// define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+// define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+// define( 'NONCE_SALT',       'put your unique phrase here' );
 
 
 
@@ -68,6 +69,20 @@ define( 'WP_DEBUG_DISPLAY', false );
 // =================================================================
 // define( 'SAVEQUERIES', true );
 // define( 'WP_DEBUG', true );
+
+// =================
+// Other Definitions
+// =================
+
+define( 'WP_HOME', $protocol_to_use . $_SERVER['HTTP_HOST']);
+
+define( 'UPLOADS', ''.'files' );
+
+define( 'AUTOMATIC_UPDATER_DISABLED', true ); // Disabled automatic wordpress updates so not to bypass git
+
+define( 'DISALLOW_FILE_EDIT', true ); // Disabled WP UI file changes so not to bypass git
+
+define( 'DISALLOW_FILE_MODS', true ); // Disabled plugin uploads so not to bypass git
 
 // ======================================
 // Load a Memcached config if we have one
