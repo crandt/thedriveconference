@@ -5,12 +5,22 @@
 if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	define( 'WP_LOCAL_DEV', true );
 	include( dirname( __FILE__ ) . '/local-config.php' );
+	// ==============================================================
+	// Table prefix
+	// Change this if you have multiple installs in the same database
+	// ==============================================================
+	$table_prefix  = 'tdc_';
 } else {
 	define( 'WP_LOCAL_DEV', false );
 	define( 'DB_NAME', '%%DB_NAME%%' );
 	define( 'DB_USER', '%%DB_USER%%' );
 	define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
 	define( 'DB_HOST', '%%DB_HOST%%' ); // Probably 'localhost'
+	// ==============================================================
+	// Table prefix
+	// Change this if you have multiple installs in the same database
+	// ==============================================================
+	$table_prefix  = 'wp_';
 }
 
 // ========================
@@ -38,11 +48,7 @@ define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
 define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
 define( 'NONCE_SALT',       'put your unique phrase here' );
 
-// ==============================================================
-// Table prefix
-// Change this if you have multiple installs in the same database
-// ==============================================================
-$table_prefix  = 'wp_';
+
 
 // ================================
 // Language
