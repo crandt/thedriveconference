@@ -1,26 +1,12 @@
 /******************************************************************
-Theme Name: JointsWP (CSS)
-Theme URI: http://www.jointswp.com
-Description: 
-Author: Your Name Here
+Theme Name: DRIVE-2016
+Base Theme URI: http://www.jointswp.com
+Description: Theme developed for the DRIVE/conference using the JointsWP framework
+Author: Tim Crandley
 Author URI: http://www.yoururlhere.com
 Version: 2.0 (CSS)
 Foundation Version: 5.5.1
-Tags: 
-
-------------------------------------------------------------------
-
-This theme uses Sass.
-You will find the .scss files in the /library/scss directory.
-Those files compile to the styles.css found in the library/css directory.
-
-Reccomended tools for working with Sass:
-
-CodeKit: (Best)
-http://incident57.com/codekit/
-
-Compass App: (Windows / Mac Users)
-http://compass.handlino.com/
+Tags:
 
 ---------------------------------------------------------------
 
@@ -43,4 +29,3 @@ feel free to use it to leave notes to yourself.
 -- Registered and created "top" nav
 
 ******************************************************************/
-

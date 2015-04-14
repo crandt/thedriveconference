@@ -5,16 +5,17 @@ INCLUDE NEEDED FILES
 *********************/
 
 // LOAD JOINTSWP CORE (if you remove this, the theme will break)
-require_once(get_template_directory().'/library/joints.php'); 
+require_once(get_template_directory().'/library/joints.php');
 
 // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-require_once(get_template_directory().'/library/custom-post-type.php'); // you can disable this if you like
+/* Disabled Custom Post Type, using plugin instead */
+// require_once(get_template_directory().'/library/custom-post-type.php'); // you can disable this if you like
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
-// require_once(get_template_directory().'/library/admin.php'); 
+require_once(get_template_directory().'/library/admin.php');
 
 // SUPPORT FOR OTHER LANGUAGES (off by default)
-// require_once(get_template_directory().'/library/translation/translation.php'); 
+// require_once(get_template_directory().'/library/translation/translation.php');
 
 /*********************
 MENUS & NAVIGATION
