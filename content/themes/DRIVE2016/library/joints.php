@@ -120,20 +120,22 @@ function joints_scripts_and_styles() {
     wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/foundation/js/vendor/modernizr.js', array(), '2.5.3', false );
     
     // adding Foundation scripts file in the footer
-    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '
-    /foundation/js/foundation.min.js', array( 'jquery' ), $theme_version, true );
+    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/foundation.min.js', array( 'jquery' ), $theme_version, true );
    
     // register foundation stylesheet
 	wp_enqueue_style( 'foundation-stylesheet', get_stylesheet_directory_uri() . '/foundation/css/foundation.css', array(), '', 'all' );
 
-// register normalize stylesheet
+	// register normalize stylesheet
 	wp_enqueue_style( 'normalize-stylesheet', get_stylesheet_directory_uri() . '/foundation/css/normalize.css', array(), '', 'all' );
 
     // register main stylesheet
     wp_enqueue_style( 'joints-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), $theme_version, 'all' );
     
     // register foundation icons
-    // wp_enqueue_style( 'foundation-icons', get_template_directory_uri() . '/library/css/icons/foundation-icons.css', array(), $theme_version, 'all' );
+	wp_enqueue_style( 'foundation-icons', get_template_directory_uri() . '/library/css/icons/foundation-icons.css', array(), $theme_version, 'all' );
+
+	//register fontawesome icons
+	wp_enqueue_style( 'font-awesome-icons', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), '4.3.0' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
