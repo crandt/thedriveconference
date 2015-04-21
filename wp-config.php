@@ -21,6 +21,8 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	// Change this if you have multiple installs in the same database
 	// ==============================================================
 	$table_prefix  = 'wp_';
+	ini_set( 'display_errors', 0 );
+	define( 'WP_DEBUG_DISPLAY', false );
 }
 
 // ========================
@@ -60,8 +62,7 @@ define( 'WPLANG', '' );
 // ===========
 // Hide errors
 // ===========
-ini_set( 'display_errors', 0 );
-define( 'WP_DEBUG_DISPLAY', false );
+
 
 // =================================================================
 // Debug mode

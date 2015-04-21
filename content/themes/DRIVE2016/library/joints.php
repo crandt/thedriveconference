@@ -351,7 +351,7 @@ function joints_filter_ptags_on_images($content){
 function joints_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __('Read', 'jointstheme') . get_the_title($post->ID).'">'. __('Read more &raquo;', 'jointstheme') .'</a>';
+return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __('Continue reading: ', 'jointstheme') . get_the_title($post->ID).'">'. __('Read more &raquo;', 'jointstheme') .'</a>';
 }
 
 //  Stop WordPress from using the sticky class (which conflicts with Foundation), and style WordPress sticky posts using the .wp-sticky class instead
