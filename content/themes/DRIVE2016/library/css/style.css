@@ -86,6 +86,9 @@ Development STYLES
   border: 1px solid green;
 }
 
+#sched_main .row, .columns {
+border: 1px solid blue;
+}
 
 
 /*********************
